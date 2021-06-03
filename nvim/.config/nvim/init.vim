@@ -32,124 +32,10 @@ endif
 call plug#begin(expand('~/.config/nvim/plugged'))
 
 "*****************************************************************************
-"" Plug install packages
-"*****************************************************************************
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
-Plug 'vim-scripts/grep.vim'
-Plug 'vim-scripts/CSApprox'
-Plug 'Raimondi/delimitMate'
-Plug 'majutsushi/tagbar'
-Plug 'dense-analysis/ale'
-Plug 'Yggdroot/indentLine'
-Plug 'editor-bootstrap/vim-bootstrap-updater'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-Plug 'tomasr/molokai'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-
-if isdirectory('/usr/local/opt/fzf')
-    Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
-endif
-let g:make = 'gmake'
-if exists('make')
-    let g:make = 'make'
-endif
-Plug 'Shougo/vimproc.vim', {'do': g:make}
-
-"" Vim-Session
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
-
-"" Snippets
-" Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-
-"*****************************************************************************
 "" Custom bundles
 "*****************************************************************************
 
-" c
-Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
-Plug 'ludwig/split-manpage.vim'
-
-
-" go
-"" Go Lang Bundle
-Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
-
-
-" html
-"" HTML Bundle
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gko/vim-coloresque'
-Plug 'tpope/vim-haml'
-Plug 'mattn/emmet-vim'
-
-
-" javascript
-"" Javascript Bundle
-Plug 'jelera/vim-javascript-syntax'
-
-
-" lua
-"" Lua Bundle
-Plug 'xolox/vim-lua-ftplugin'
-Plug 'xolox/vim-lua-inspect'
-
-
-" php
-"" PHP Bundle
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install --no-dev -o'}
-Plug 'stephpy/vim-php-cs-fixer'
-
-
-" rust
-" Vim racer
-Plug 'racer-rust/vim-racer'
-
-" Rust.vim
-Plug 'rust-lang/rust.vim'
-
-" Async.vim
-Plug 'prabirshrestha/async.vim'
-
-" Vim lsp
-Plug 'prabirshrestha/vim-lsp'
-
-" Asyncomplete.vim
-Plug 'prabirshrestha/asyncomplete.vim'
-
-" Asyncomplete lsp.vim
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-
-
-" typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'HerringtonDarkholme/yats.vim'
-
-" COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" Nerd tree
-Plug 'preservim/nerdtree'
-map <C-e> :NERDTreeToggle<CR>
-
-" Auto format
-Plug 'Chiel92/vim-autoformat'
-au BufWrite * :Autoformat
-let g:python3_host_prog="/path/to/python/executable/"
-let g:formatters_vue = ['eslint_local', 'stylelint']
-
-Plug 'psliwka/vim-smoothie'
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -172,21 +58,10 @@ else
     inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" control P
-Plug 'ctrlpvim/ctrlp.vim'
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" === Plugins ===
+source ~/.config/nvim/Plugins.vim
+source ~/.config/nvim/Lets.vim
 
-" Vim Commander
-Plug 'preservim/nerdcommenter'
-
-" Editorconfig
-Plug 'editorconfig/editorconfig-vim'
-
-" Gruvbox theme
-Plug 'morhetz/gruvbox'
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
 
 "*****************************************************************************
 "*****************************************************************************
@@ -220,8 +95,6 @@ set softtabstop=0
 set shiftwidth=4
 set expandtab
 
-"" Map leader to ,
-let mapleader=','
 
 "" Enable hidden buffers
 set hidden
@@ -240,11 +113,6 @@ else
     set shell=/bin/sh
 endif
 
-" session management
-let g:session_directory = "~/.config/nvim/session"
-let g:session_autoload = "no"
-let g:session_autosave = "no"
-let g:session_command_aliases = 1
 
 "*****************************************************************************
 "" Visual Settings
@@ -276,7 +144,6 @@ function! s:show_documentation()
     endif
 endfunction
 
-let no_buffers_menu=1
 " colorscheme molokai
 colorscheme gruvbox
 
@@ -334,13 +201,6 @@ if exists("*fugitive#statusline")
     set statusline+=%{fugitive#statusline()}
 endif
 
-" vim-airline
-let g:airline_theme = 'powerlineish'
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline_skip_empty_sections = 1
 
 "*****************************************************************************
 "" Abbreviations
@@ -357,21 +217,6 @@ cnoreabbrev W w
 cnoreabbrev Q q
 cnoreabbrev Qall qall
 
-"" NERDTree configuration
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 50
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
-
-" grep.vim
-nnoremap <silent> <leader>f :Rgrep<CR>
-let Grep_Default_Options = '-IR'
-let Grep_Skip_Files = '*.log *.db'
-let Grep_Skip_Dirs = '.git node_modules'
 
 " terminal emulation
 nnoremap <silent> <leader>sh :terminal<CR>
@@ -486,18 +331,9 @@ nnoremap <silent> <leader>e :FZF -m<CR>
 "Recovery commands from history through FZF
 nmap <leader>y :History:<CR>
 
-" snippets
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-b>"
-let g:UltiSnipsEditSplit="vertical"
-
-" ale
-let g:ale_linters = {}
 
 " Tagbar
 nmap <silent> <F4> :TagbarToggle<CR>
-let g:tagbar_autofocus = 1
 
 " Disable visualbell
 set noerrorbells visualbell t_vb=
@@ -570,22 +406,6 @@ function! s:build_go_files()
     endif
 endfunction
 
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_structs = 1
-let g:go_highlight_generate_tags = 1
-let g:go_highlight_space_tab_error = 0
-let g:go_highlight_array_whitespace_error = 0
-let g:go_highlight_trailing_whitespace_error = 0
-let g:go_highlight_extra_types = 1
 
 autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
@@ -631,8 +451,6 @@ augroup END
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 
 
-" javascript
-let g:javascript_enable_domhtmlcss = 1
 
 " vim-javascript
 augroup vimrc-javascript
@@ -679,8 +497,6 @@ au FileType rust nmap gx <Plug>(rust-def-vertical)
 au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
-" typescript
-let g:yats_host_keyword = 1
 
 
 
