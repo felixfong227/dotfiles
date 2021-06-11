@@ -290,7 +290,7 @@ noremap <Leader>gs :Git status<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Git diff<CR>
 noremap <Leader>gr :Git move<CR>
-noremap <Leader>gl :Git log<CR>
+noremap <Leader>gl :Glog<CR>
 
 " session management
 " nnoremap <leader>so :OpenSession<Space>
