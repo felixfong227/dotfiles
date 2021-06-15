@@ -1,4 +1,4 @@
-
+g:gruvbox_transparent_bg = 1
 
 " control p
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']

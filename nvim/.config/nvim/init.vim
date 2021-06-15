@@ -10,7 +10,6 @@ else
     let curl_exists=expand('curl')
 endif
 
-let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,rust,typescript"
 let g:vim_bootstrap_editor = "nvim"             " nvim or vim
 let g:vim_bootstrap_theme = "molokai"
 let g:vim_bootstrap_frams = ""
@@ -147,6 +146,11 @@ endfunction
 " colorscheme molokai
 colorscheme gruvbox
 
+" Transparents background
+hi Normal guibg=NONE ctermbg=NONE
+
+let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,rust,typescript"
+
 
 set mousemodel=popup
 set t_Co=256
@@ -279,27 +283,28 @@ noremap <Leader>v :<C-u>vsplit<CR>
 
 "" Git
 noremap <Leader>ga :Gwrite<CR>
-noremap <Leader>gc :Gcommit<CR>
-noremap <Leader>gsh :Gpush<CR>
-noremap <Leader>gll :Gpull<CR>
-noremap <Leader>gs :Gstatus<CR>
-noremap <Leader>gb :Gblame<CR>
-noremap <Leader>gd :Gvdiff<CR>
-noremap <Leader>gr :Gremove<CR>
+noremap <Leader>gc :Git commit<CR>
+noremap <Leader>gsh :Git push<CR>
+noremap <Leader>gll :Git pull<CR>
+noremap <Leader>gs :Git status<CR>
+noremap <Leader>gb :Git blame<CR>
+noremap <Leader>gd :Git diff<CR>
+noremap <Leader>gr :Git move<CR>
+noremap <Leader>gl :Glog<CR>
 
 " session management
-nnoremap <leader>so :OpenSession<Space>
-nnoremap <leader>ss :SaveSession<Space>
-nnoremap <leader>sd :DeleteSession<CR>
-nnoremap <leader>sc :CloseSession<CR>
+" nnoremap <leader>so :OpenSession<Space>
+" nnoremap <leader>ss :SaveSession<Space>
+" nnoremap <leader>sd :DeleteSession<CR>
+" nnoremap <leader>sc :CloseSession<CR>
 
 "" Tabs
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <silent> <S-t> :tabnew<CR>
+" nnoremap <Tab> gt
+" nnoremap <S-Tab> gT
+" nnoremap <silent> <S-t> :tabnew<CR>
 
 "" Set working directory
-nnoremap <leader>. :lcd %:p:h<CR>
+" nnoremap <leader>. :lcd %:p:h<CR>
 
 "" Opens an edit command with the path of the currently edited file filled in
 noremap <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -389,11 +394,6 @@ nnoremap <Leader>o :.Gbrowse<CR>
 "" Custom configs
 "*****************************************************************************
 
-" c
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-
 " go
 " vim-go
 " run :GoBuild or :GoTestCompile based on the go file
@@ -459,42 +459,39 @@ augroup vimrc-javascript
 augroup END
 
 
-" lua
-
-
 " php
 " Phpactor plugin
 " Include use statement
-nmap <Leader>u :call phpactor#UseAdd()<CR>
-" Invoke the context menu
-nmap <Leader>mm :call phpactor#ContextMenu()<CR>
-" Invoke the navigation menu
-nmap <Leader>nn :call phpactor#Navigate()<CR>
-" Goto definition of class or class member under the cursor
-nmap <Leader>oo :call phpactor#GotoDefinition()<CR>
-nmap <Leader>oh :call phpactor#GotoDefinitionHsplit()<CR>
-nmap <Leader>ov :call phpactor#GotoDefinitionVsplit()<CR>
-nmap <Leader>ot :call phpactor#GotoDefinitionTab()<CR>
-" Show brief information about the symbol under the cursor
-nmap <Leader>K :call phpactor#Hover()<CR>
-" Transform the classes in the current file
-nmap <Leader>tt :call phpactor#Transform()<CR>
-" Generate a new class (replacing the current file)
-nmap <Leader>cc :call phpactor#ClassNew()<CR>
-" Extract expression (normal mode)
-nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
-" Extract expression from selection
-vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
-" Extract method from selection
-vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
+" nmap <Leader>u :call phpactor#UseAdd()<CR>
+" " Invoke the context menu
+" nmap <Leader>mm :call phpactor#ContextMenu()<CR>
+" " Invoke the navigation menu
+" nmap <Leader>nn :call phpactor#Navigate()<CR>
+" " Goto definition of class or class member under the cursor
+" nmap <Leader>oo :call phpactor#GotoDefinition()<CR>
+" nmap <Leader>oh :call phpactor#GotoDefinitionHsplit()<CR>
+" nmap <Leader>ov :call phpactor#GotoDefinitionVsplit()<CR>
+" nmap <Leader>ot :call phpactor#GotoDefinitionTab()<CR>
+" " Show brief information about the symbol under the cursor
+" nmap <Leader>K :call phpactor#Hover()<CR>
+" " Transform the classes in the current file
+" nmap <Leader>tt :call phpactor#Transform()<CR>
+" " Generate a new class (replacing the current file)
+" nmap <Leader>cc :call phpactor#ClassNew()<CR>
+" " Extract expression (normal mode)
+" nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+" " Extract expression from selection
+" vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+" " Extract method from selection
+" vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
 
 " rust
 " Vim racer
-au FileType rust nmap gd <Plug>(rust-def)
-au FileType rust nmap gs <Plug>(rust-def-split)
-au FileType rust nmap gx <Plug>(rust-def-vertical)
-au FileType rust nmap <leader>gd <Plug>(rust-doc)
+" au FileType rust nmap gd <Plug>(rust-def)
+" au FileType rust nmap gs <Plug>(rust-def-split)
+" au FileType rust nmap gx <Plug>(rust-def-vertical)
+" au FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 
 
