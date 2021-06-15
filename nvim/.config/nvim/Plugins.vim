@@ -4,27 +4,27 @@
 " Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 " Plug 'editor-bootstrap/vim-bootstrap-updater'
-Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+" Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 " Plug 'tomasr/molokai'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
-if isdirectory('/usr/local/opt/fzf')
-    Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
-else
-    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
-    Plug 'junegunn/fzf.vim'
-endif
+" if isdirectory('/usr/local/opt/fzf')
+"     Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+" else
+"     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
+"     Plug 'junegunn/fzf.vim'
+" endif
 
 let g:make = 'gmake'
 if exists('make')
@@ -38,7 +38,7 @@ Plug 'xolox/vim-session'
 
 "" Snippets
 " Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " c
 "Plug 'vim-scripts/c.vim', {'for': ['c', 'cpp']}
@@ -122,3 +122,8 @@ Plug 'editorconfig/editorconfig-vim'
 
 " Gruvbox theme
 Plug 'morhetz/gruvbox'
+
+" Svelte
+Plug 'leafOfTree/vim-svelte-plugin'
+
+

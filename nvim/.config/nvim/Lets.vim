@@ -10,7 +10,7 @@ let g:python3_host_prog="/path/to/python/executable/"
 let g:formatters_vue = ['eslint_local', 'stylelint']
 
 "" Map leader to ,
-let mapleader=','
+let mapleader=' '
 
 
 " session management
@@ -57,7 +57,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 
 " ale
-let g:ale_linters = {}
+let g:ale_linters = {'svelte': ['stylelint', 'eslint']}
+let g:ale_linter_aliases = {'svelte': ['css', 'scss', 'javascript', 'typescript']}
 
 " Tabgar
 let g:tagbar_autofocus = 1
@@ -87,3 +88,6 @@ let g:javascript_enable_domhtmlcss = 1
 
 " typescript
 let g:yats_host_keyword = 1
+
+let g:svelte_preprocessors = ['typescript']
+let g:vim_svelte_plugin_use_typescript = 1
