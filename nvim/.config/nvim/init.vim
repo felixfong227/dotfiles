@@ -59,8 +59,8 @@ else
 endif
 
 " === Plugins ===
-source ~/.config/nvim/Plugins.vim
 source ~/.config/nvim/Lets.vim
+source ~/.config/nvim/Plugins.vim
 
 
 "*****************************************************************************
@@ -548,3 +548,4 @@ else
     let g:airline_symbols.linenr = ''
 endif
 
+set updatetime=100
