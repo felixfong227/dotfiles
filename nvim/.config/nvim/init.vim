@@ -284,7 +284,7 @@ noremap <Leader>v :<C-u>vsplit<CR>
 "" Git
 noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
-noremap <Leader>gsh :Git push<CR>
+noremap <Leader>gsh :Git push --no-verify<CR>
 noremap <Leader>gll :Git pull<CR>
 noremap <Leader>gs :Git status<CR>
 noremap <Leader>gb :Git blame<CR>
@@ -546,3 +546,6 @@ else
 endif
 
 set updatetime=100
+
+noremap <c-i> <C-^>
+
