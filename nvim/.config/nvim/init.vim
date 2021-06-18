@@ -121,7 +121,6 @@ set ruler
 set number
 set relativenumber
 set so=20
-set autochdir
 set colorcolumn=80
 highlight ColorColumn guibg=red
 :tnoremap <Esc> <C-\><C-n
@@ -549,3 +548,7 @@ set updatetime=100
 
 noremap <c-i> <C-^>
 
+set noswapfile
+
+nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>ps <cmd>lua require('telescope.builtin').live_grep()<cr>
