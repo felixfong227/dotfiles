@@ -4,7 +4,7 @@
 " Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
-" Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mhinz/vim-signify'
@@ -15,7 +15,7 @@ Plug 'majutsushi/tagbar'
 Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 " Plug 'editor-bootstrap/vim-bootstrap-updater'
-" Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
+Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
 " Plug 'tomasr/molokai'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -112,7 +112,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'psliwka/vim-smoothie'
 
 " control P
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 
 " Vim Commander
 " Plug 'preservim/nerdcommenter'
@@ -126,4 +126,10 @@ Plug 'morhetz/gruvbox'
 " Svelte
 Plug 'leafOfTree/vim-svelte-plugin'
 
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
+" Vim-rooter
+Plug 'rendon/vim-rooter'
