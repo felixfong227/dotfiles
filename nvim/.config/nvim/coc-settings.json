@@ -1,0 +1,18 @@
+{
+    "eslint.run": "onType",
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": true,
+    "suggest.completionItemKindLabels": {
+        "variable": "⚛️",
+        "constant": "🔐",
+        "struct": "🪜",
+        "class": "🚧",
+        "interface": "🪜",
+        "text": "💬",
+        "function": "🔨",
+        "method": "🛠",
+        "field": "🔑",
+        "file": "📁",
+        "folder": "🗂"
+    }
+}

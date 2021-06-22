@@ -123,6 +123,9 @@ Plug 'editorconfig/editorconfig-vim'
 " Gruvbox theme
 Plug 'morhetz/gruvbox'
 
+" Dogrun
+Plug 'wadackel/vim-dogrun'
+
 " Svelte
 Plug 'leafOfTree/vim-svelte-plugin'
 
@@ -135,3 +138,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend upda
 
 " Vim-rooter
 Plug 'rendon/vim-rooter'
+
+" Spelunker.vim
+Plug 'kamykn/popup-menu.nvim'
+Plug 'kamykn/spelunker.vim'
