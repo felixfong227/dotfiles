@@ -91,3 +91,6 @@ let g:yats_host_keyword = 1
 
 let g:svelte_preprocessors = ['typescript']
 let g:vim_svelte_plugin_use_typescript = 1
+
+let g:enable_spelunker_vim = 1
+let g:enable_spelunker_vim_on_readonly = 1

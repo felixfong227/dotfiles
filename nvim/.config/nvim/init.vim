@@ -144,6 +144,7 @@ endfunction
 
 " colorscheme molokai
 colorscheme gruvbox
+" colorscheme dogrun
 
 " Transparents background
 hi Normal guibg=NONE ctermbg=NONE
@@ -287,7 +288,7 @@ noremap <Leader>gsh :Git push --no-verify<CR>
 noremap <Leader>gll :Git pull<CR>
 noremap <Leader>gs :Git status<CR>
 noremap <Leader>gb :Git blame<CR>
-noremap <Leader>gd :Git diff<CR>
+noremap <Leader>gd :Gdiffsplit<CR>
 noremap <Leader>gr :Git move<CR>
 noremap <Leader>gl :Glog<CR>
 
