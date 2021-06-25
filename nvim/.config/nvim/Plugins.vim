@@ -142,3 +142,7 @@ Plug 'rendon/vim-rooter'
 " Spelunker.vim
 Plug 'kamykn/popup-menu.nvim'
 Plug 'kamykn/spelunker.vim'
+
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
