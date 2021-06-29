@@ -556,3 +556,6 @@ set noswapfile
 
 nnoremap <c-p> <cmd>:Files<cr>
 nnoremap <leader>ps <cmd>:Rg<cr>
+
+nnoremap <leader>f :diffget //2<CR>
+nnoremap <leader>j :diffget //3<CR>
