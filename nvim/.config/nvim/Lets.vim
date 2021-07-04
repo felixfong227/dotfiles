@@ -1,4 +1,4 @@
-g:gruvbox_transparent_bg = 1
+" g:gruvbox_transparent_bg = 1
 
 " control p
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -91,6 +91,7 @@ let g:yats_host_keyword = 1
 
 let g:svelte_preprocessors = ['typescript']
 let g:vim_svelte_plugin_use_typescript = 1
+let g:vim_svelte_plugin_use_sass = 1
 
 let g:enable_spelunker_vim = 1
 let g:enable_spelunker_vim_on_readonly = 1
