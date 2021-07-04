@@ -551,5 +551,11 @@ noremap <c-i> <C-^>
 
 set noswapfile
 
-nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>ps <cmd>lua require('telescope.builtin').live_grep()<cr>
+" nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
+" nnoremap <leader>ps <cmd>lua require('telescope.builtin').live_grep()<cr>
+
+nnoremap <c-p> <cmd>:Files<cr>
+nnoremap <leader>ps <cmd>:Rg<cr>
+
+nnoremap <leader>f :diffget //2<CR>
+nnoremap <leader>j :diffget //3<CR>
