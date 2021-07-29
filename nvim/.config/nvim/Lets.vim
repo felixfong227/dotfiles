@@ -6,7 +6,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 au BufWrite * :Autoformat
-let g:python3_host_prog="/path/to/python/executable/"
+" let g:python3_host_prog="/path/to/python/executable/"
 let g:formatters_vue = ['eslint_local', 'stylelint']
 
 "" Map leader to ,

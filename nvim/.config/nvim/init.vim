@@ -546,7 +546,7 @@ else
     let g:airline_symbols.linenr = ''
 endif
 
-set updatetime=100
+set lazyredraw
 
 noremap <c-i> <C-^>
 
