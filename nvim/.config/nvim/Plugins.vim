@@ -146,3 +146,6 @@ Plug 'kamykn/spelunker.vim'
 " Fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Edge theme
+Plug 'sainnhe/edge'

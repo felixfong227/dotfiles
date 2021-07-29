@@ -11,7 +11,7 @@ else
 endif
 
 let g:vim_bootstrap_editor = "nvim"             " nvim or vim
-let g:vim_bootstrap_theme = "molokai"
+" let g:vim_bootstrap_theme = "molokai"
 let g:vim_bootstrap_frams = ""
 
 if !filereadable(vimplug_exists)
@@ -121,7 +121,7 @@ set ruler
 set number
 set relativenumber
 set so=20
-set colorcolumn=80
+" set colorcolumn=80
 highlight ColorColumn guibg=red
 :tnoremap <Esc> <C-\><C-n
 
@@ -143,11 +143,12 @@ function! s:show_documentation()
 endfunction
 
 " colorscheme molokai
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme dogrun
+colorscheme edge
 
 " Transparents background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,rust,typescript"
 
