@@ -2,7 +2,7 @@
 "" Plug install packages
 "*****************************************************************************
 " Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
@@ -12,7 +12,7 @@ Plug 'vim-scripts/grep.vim'
 Plug 'vim-scripts/CSApprox'
 Plug 'jiangmiao/auto-pairs'
 Plug 'majutsushi/tagbar'
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 " Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
@@ -34,7 +34,7 @@ Plug 'Shougo/vimproc.vim', {'do': g:make}
 
 "" Vim-Session
 Plug 'xolox/vim-misc'
-Plug 'xolox/vim-session'
+" Plug 'xolox/vim-session'
 
 "" Snippets
 " Plug 'SirVer/ultisnips'
@@ -86,7 +86,7 @@ Plug 'xolox/vim-lua-inspect'
 Plug 'prabirshrestha/async.vim'
 
 " Vim lsp
-Plug 'prabirshrestha/vim-lsp'
+" Plug 'prabirshrestha/vim-lsp'
 
 " Asyncomplete.vim
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -109,8 +109,6 @@ map <C-e> :NERDTreeToggle<CR>
 " Auto format
 Plug 'Chiel92/vim-autoformat'
 
-Plug 'psliwka/vim-smoothie'
-
 " control P
 " Plug 'ctrlpvim/ctrlp.vim'
 
@@ -131,9 +129,9 @@ Plug 'leafOfTree/vim-svelte-plugin'
 
 " Telescope
 Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 
 " Vim-rooter
