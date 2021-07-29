@@ -11,7 +11,7 @@ else
 endif
 
 let g:vim_bootstrap_editor = "nvim"             " nvim or vim
-" let g:vim_bootstrap_theme = "molokai"
+let g:vim_bootstrap_theme = "molokai"
 let g:vim_bootstrap_frams = ""
 
 if !filereadable(vimplug_exists)
@@ -120,10 +120,10 @@ syntax on
 set ruler
 set number
 set relativenumber
-set so=20
+set so=80
 " set colorcolumn=80
 highlight ColorColumn guibg=red
-:tnoremap <Esc> <C-\><C-n
+:tnoremap <Esc> <C-\><C-n>
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -150,7 +150,7 @@ colorscheme edge
 " Transparents background
 " hi Normal guibg=NONE ctermbg=NONE
 
-let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,rust,typescript"
+" let g:vim_bootstrap_langs = "c,go,html,javascript,lua,php,rust,typescript"
 
 
 set mousemodel=popup
@@ -248,31 +248,31 @@ endif
 "" Autocmd Rules
 "*****************************************************************************
 "" The PC is fast enough, do syntax highlight syncing from start unless 200 lines
-augroup vimrc-sync-fromstart
-    autocmd!
-    autocmd BufEnter * :syntax sync maxlines=200
-augroup END
+" augroup vimrc-sync-fromstart
+"     autocmd!
+"     autocmd BufEnter * :syntax sync maxlines=200
+" augroup END
 
-"" Remember cursor position
-augroup vimrc-remember-cursor-position
-    autocmd!
-    autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
-augroup END
+" "" Remember cursor position
+" augroup vimrc-remember-cursor-position
+"     autocmd!
+"     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+" augroup END
 
-"" txt
-augroup vimrc-wrapping
-    autocmd!
-    autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
-augroup END
+" "" txt
+" augroup vimrc-wrapping
+"     autocmd!
+"     autocmd BufRead,BufNewFile *.txt call s:setupWrapping()
+" augroup END
 
-"" make/cmake
-augroup vimrc-make-cmake
-    autocmd!
-    autocmd FileType make setlocal noexpandtab
-    autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
-augroup END
+" "" make/cmake
+" augroup vimrc-make-cmake
+"     autocmd!
+"     autocmd FileType make setlocal noexpandtab
+"     autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
+" augroup END
 
-set autoread
+" set autoread
 
 "*****************************************************************************
 "" Mappings
