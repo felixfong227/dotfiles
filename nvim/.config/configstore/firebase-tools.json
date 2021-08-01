@@ -1,0 +1,45 @@
+{
+	"analytics-uuid": "15a8c5d5-c877-4f17-89a3-cb8d7066a3f5",
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1625399939869
+	},
+	"usage": false,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "112924161674946099217",
+		"email": "may010130@gmail.com",
+		"email_verified": true,
+		"at_hash": "eW9AfbQErTkvsyDApRzzTQ",
+		"iat": 1625399955,
+		"exp": 1625403555
+	},
+	"tokens": {
+		"expires_at": 1625403597303,
+		"refresh_token": "1//0ePUHU_Dguv0yCgYIARAAGA4SNwF-L9IrtbYJzkQnadiYDc6L0obwyLUTtaUO6bBSIQy-spU-1SdEDWLAxgGozWXQPRk-LAzV0xU",
+		"scopes": [
+			"email",
+			"https://www.googleapis.com/auth/cloud-platform",
+			"https://www.googleapis.com/auth/cloudplatformprojects.readonly",
+			"https://www.googleapis.com/auth/firebase",
+			"openid"
+		],
+		"access_token": "ya29.a0ARrdaM-ZYZu43l0jkNZJtEcTRUSqZ7_55aeJoiD1nbQN4GHzhg9FzQOtewGPmbChDxZaQuSmiqcZ9IBcQvuSdFJA7dzSuDDSWC0oQoby_2cFYcskj3H-4e7DDEbl1IRWoB4Kha6CbIJ27tWmMYOas_NY4R6lzt5Ke9v3",
+		"expires_in": 3599,
+		"scope": "openid https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/cloudplatformprojects.readonly",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImI2ZjhkNTVkYTUzNGVhOTFjYjJjYjAwZTFhZjRlOGUwY2RlY2E5M2QiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEyOTI0MTYxNjc0OTQ2MDk5MjE3IiwiZW1haWwiOiJtYXkwMTAxMzBAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJKMHg0VHc4eURWUko1VWZTRGJWUUt3IiwiaWF0IjoxNjI1NDAwMDAzLCJleHAiOjE2MjU0MDM2MDN9.Cnwox1MtMzDwaeRkcVvlOJ-dlH8JtVT4hqbXk5OY8AGeMeENE1guR3_-_tbA2vApc7wDnXgzqg49mOk9DbMdSdU5TdekWODDMHIZZaLU_hjcX2P-LF1IKTuliLdiLuv_JOpl3IOkH-2AI-Xc7ht6Jsfn7l4CEvz_cI8nwGb6nifpoiefzMe2jO3fuo23EdYxmWVSVw0x402q6eMMIjWhJykQaPlyo5-jnGHitESvLrIjaAt58bJntv6pH-rCRy23Sg5TJtD4mCYjngE9y066lb6ELX6elvE0KTA1u1o9ZPb7lEHJTlovl9lTUWRt_yo3A4vmu2-aA-sBKT_s6dwCsw"
+	},
+	"activeProjects": {
+		"/home/felixfong/Projects/OpenRoom/client": "open-room-dev"
+	},
+	"lastError": 1625401448352
+}

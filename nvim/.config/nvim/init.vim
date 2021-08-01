@@ -1,34 +1,10 @@
-" vim-bootstrap 2020-12-02 07:22:35
 
-"*****************************************************************************
-"" Vim-Plug core
-"*****************************************************************************
-let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
-if has('win32')&&!has('win64')
-    let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
-else
-    let curl_exists=expand('curl')
-endif
+" Automatically run the PackerCompile command when saving the package file
+autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 
-let g:vim_bootstrap_editor = "nvim"             " nvim or vim
-let g:vim_bootstrap_theme = "molokai"
-let g:vim_bootstrap_frams = ""
+lua require 'plugins'
+source ~/.config/nvim/Lets.vim
 
-if !filereadable(vimplug_exists)
-    if !executable(curl_exists)
-        echoerr "You have to install curl or first install vim-plug yourself!"
-        execute "q!"
-    endif
-    echo "Installing Vim-Plug..."
-    echo ""
-    silent exec "!"curl_exists" -fLo " . shellescape(vimplug_exists) . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
-    let g:not_finish_vimplug = "yes"
-
-    autocmd VimEnter * PlugInstall
-endif
-
-" Required:
-call plug#begin(expand('~/.config/nvim/plugged'))
 
 "*****************************************************************************
 "" Custom bundles
@@ -57,23 +33,8 @@ else
     inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
-" === Plugins ===
-source ~/.config/nvim/Lets.vim
-source ~/.config/nvim/Plugins.vim
-
-
 "*****************************************************************************
 "*****************************************************************************
-
-"" Include user's extra bundle
-if filereadable(expand("~/.config/nvim/local_bundles.vim"))
-    source ~/.config/nvim/local_bundles.vim
-endif
-
-call plug#end()
-
-" Required:
-filetype plugin indent on
 
 
 "*****************************************************************************
@@ -442,23 +403,15 @@ augroup go
 
 augroup END
 
-" ale
-:call extend(g:ale_linters, {
-            \"go": ['golint', 'go vet'], })
-
-
 " html
 " for html files, 2 spaces
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
-
-
 
 " vim-javascript
 augroup vimrc-javascript
     autocmd!
     autocmd FileType javascript setl tabstop=4|setl shiftwidth=4|setl expandtab softtabstop=4
 augroup END
-
 
 " php
 " Phpactor plugin
@@ -560,3 +513,5 @@ nnoremap <leader>ps <cmd>:Rg<cr>
 
 nnoremap <leader>f :diffget //2<CR>
 nnoremap <leader>j :diffget //3<CR>
+
+map <C-e> :NERDTreeToggle<CR>
