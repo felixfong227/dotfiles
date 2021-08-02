@@ -19,16 +19,16 @@ return require('packer').startup(function()
 
     use {
         'mhinz/vim-signify',
-        event = 'BufEnter'
+        event = 'BufWinEnter'
     }
 
     use {
         'vim-airline/vim-airline-themes',
-        event = 'BufEnter',
+        event = 'BufWinEnter',
     }
     use {
         'vim-airline/vim-airline',
-        event = 'BufEnter',
+        event = 'BufWinEnter',
     }
 
     use {
@@ -121,11 +121,7 @@ return require('packer').startup(function()
         ft = {'html'},
         event = 'BufEnter'
     }
-    use {
-        'gko/vim-coloresque',
-        ft = {'html'},
-        event = 'BufEnter'
-    }
+
     use {
         'tpope/vim-haml',
         ft = {'html'},
@@ -157,16 +153,16 @@ return require('packer').startup(function()
     }
 
     -- For TypeScript
-    use {
-        use 'leafgarland/typescript-vim',
-        ft = {'typescript'},
-        event = 'BufEnter'
-    }
-    use {
-        'HerringtonDarkholme/yats.vim',
-        ft = {'typescript'},
-        event = 'BufEnter'
-    }
+    -- use {
+    --     use 'leafgarland/typescript-vim',
+    --     ft = {'typescript'},
+    --     event = 'BufWinEnter'
+    -- }
+    -- use {
+    --     'HerringtonDarkholme/yats.vim',
+    --     ft = {'typescript'},
+    --     event = 'BufWinEnter'
+    -- }
 
     -- For Svelte
     use {
