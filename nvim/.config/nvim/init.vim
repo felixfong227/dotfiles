@@ -5,6 +5,7 @@ autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 lua require 'plugins'
 source ~/.config/nvim/Lets.vim
 
+set updatetime=100
 
 "*****************************************************************************
 "" Custom bundles
@@ -103,10 +104,15 @@ function! s:show_documentation()
     endif
 endfunction
 
+set termguicolors
+let ayucolor="mirage"
+
 " colorscheme molokai
 " colorscheme gruvbox
 " colorscheme dogrun
-colorscheme edge
+" colorscheme edge
+colorscheme ayu
+
 
 " Transparents background
 " hi Normal guibg=NONE ctermbg=NONE
@@ -248,7 +254,7 @@ noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gsh :Git push --no-verify<CR>
 noremap <Leader>gll :Git pull<CR>
-noremap <Leader>gs :Git status<CR>
+noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gdiffsplit<CR>
 noremap <Leader>gr :Git move<CR>
