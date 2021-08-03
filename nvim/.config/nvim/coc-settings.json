@@ -14,5 +14,7 @@
         "field": "🔑",
         "file": "📁",
         "folder": "🗂"
-    }
+    },
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false
 }

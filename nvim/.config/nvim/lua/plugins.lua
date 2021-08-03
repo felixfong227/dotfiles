@@ -17,10 +17,16 @@ return require('packer').startup(function()
         event = 'BufWinEnter'
     }
 
+    -- use {
+    --     'mhinz/vim-signify',
+    --     event = 'BufWinEnter'
+    -- }
+
     use {
-        'mhinz/vim-signify',
+        'airblade/vim-gitgutter',
         event = 'BufWinEnter'
     }
+
 
     use {
         'vim-airline/vim-airline-themes',
@@ -179,6 +185,8 @@ return require('packer').startup(function()
     -- Themes
     -- use 'morhetz/gruvbox'
     -- use 'wadackel/vim-dogrun'
-    use 'sainnhe/edge'
+    -- use 'sainnhe/edge'
+    use 'gruvbox-community/gruvbox'
+    use 'ayu-theme/ayu-vim'
 
 end)
