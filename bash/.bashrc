@@ -141,3 +141,6 @@ export EDITOR=nvim
 alias vim=nvim
 alias open=xdg-open
 
+
+# Init a starship sell
+eval "$(starship init bash)"
