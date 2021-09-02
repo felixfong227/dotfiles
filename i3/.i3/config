@@ -268,7 +268,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id i3lockmore --image-fill ~/Pictures/bg.png
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
