@@ -521,3 +521,18 @@ nnoremap <leader>f :diffget //2<CR>
 nnoremap <leader>j :diffget //3<CR>
 
 map <C-e> :NERDTreeToggle<CR>
+
+let g:ultest_use_pty = 1
+
+if has("persistent_undo")
+   let target_path = expand('~/.undodir')
+
+    " create the directory and any parent directories
+    " if the location does not exist.
+    if !isdirectory(target_path)
+        call mkdir(target_path, "p", 0700)
+    endif
+
+    let &undodir=target_path
+    set undofile
+endif

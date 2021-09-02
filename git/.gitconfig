@@ -1,3 +1,5 @@
 [user]
-	email = moongod101@hotmail.com
+	email = ffong@finverse.com
 	name = Felix Fong
+[push]
+	default = current

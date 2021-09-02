@@ -186,7 +186,13 @@ return require('packer').startup(function()
     -- use 'morhetz/gruvbox'
     -- use 'wadackel/vim-dogrun'
     -- use 'sainnhe/edge'
-    use 'gruvbox-community/gruvbox'
+    -- use 'gruvbox-community/gruvbox'
     use 'ayu-theme/ayu-vim'
+
+    use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+
+    use 'mbbill/undotree'
+
+    use 'ryanoasis/vim-devicons'
 
 end)
