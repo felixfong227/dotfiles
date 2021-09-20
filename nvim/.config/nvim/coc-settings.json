@@ -16,5 +16,6 @@
         "folder": "🗂"
     },
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly": false
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "typescript.preferences.importModuleSpecifier": "relative"
 }
