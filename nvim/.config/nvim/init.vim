@@ -103,6 +103,7 @@ function! s:show_documentation()
         execute '!' . &keywordprg . " " . expand('<cword>')
     endif
 endfunction
+noremap <silent> <leader>a :CocAction<CR>
 
 set termguicolors
 let ayucolor="mirage"
@@ -254,7 +255,7 @@ noremap <Leader>ga :Gwrite<CR>
 noremap <Leader>gc :Git commit<CR>
 noremap <Leader>gsh :Git push --no-verify<CR>
 noremap <Leader>gll :Git pull<CR>
-noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gs :Git<CR>
 noremap <Leader>gb :Git blame<CR>
 noremap <Leader>gd :Gdiffsplit<CR>
 noremap <Leader>gr :Git move<CR>
@@ -525,7 +526,7 @@ map <C-e> :NERDTreeToggle<CR>
 let g:ultest_use_pty = 1
 
 if has("persistent_undo")
-   let target_path = expand('~/.undodir')
+    let target_path = expand('~/.undodir')
 
     " create the directory and any parent directories
     " if the location does not exist.
@@ -536,3 +537,8 @@ if has("persistent_undo")
     let &undodir=target_path
     set undofile
 endif
+
+map <leader>tr <Plug>(ultest-summary-jump)
+
+let g:AutoPairsFlyMode = 0
+let g:AutoPairsMultilineClose = 0
