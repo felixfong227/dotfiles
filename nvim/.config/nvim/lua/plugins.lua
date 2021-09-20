@@ -146,18 +146,6 @@ return require('packer').startup(function()
         event = 'BufEnter'
     }
 
-    -- For Lua
-    use {
-        'xolox/vim-lua-ftplugin',
-        ft = {'lua'},
-        event = 'BufEnter'
-    }
-    use {
-        'xolox/vim-lua-inspect',
-        ft = {'lua'},
-        event = 'BufEnter'
-    }
-
     -- For TypeScript
     -- use {
     --     use 'leafgarland/typescript-vim',
