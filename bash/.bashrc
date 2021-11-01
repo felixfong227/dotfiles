@@ -146,3 +146,4 @@ alias open=xdg-open
 eval "$(starship init bash)"
 
 export BROWSER="/usr/bin/brave"
+export NODE_ENV=development

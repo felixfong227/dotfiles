@@ -73,21 +73,19 @@ _G.packer_plugins = {
     after_files = { "/home/ffong/.local/share/nvim/site/pack/packer/opt/CSApprox/after/plugin/CSApprox.vim" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/CSApprox"
   },
   ["async.vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/async.vim"
-  },
-  ["asyncomplete.vim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/asyncomplete.vim"
   },
   ["auto-pairs"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/auto-pairs"
   },
   ["ayu-vim"] = {
@@ -97,64 +95,80 @@ _G.packer_plugins = {
   ["coc.nvim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/coc.nvim"
   },
   ["editorconfig-vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/editorconfig-vim"
   },
   ["emmet-vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/emmet-vim"
   },
   fzf = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/fzf"
   },
   ["fzf.vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/fzf.vim"
   },
   ["grep.vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/grep.vim"
   },
   indentLine = {
     after_files = { "/home/ffong/.local/share/nvim/site/pack/packer/opt/indentLine/after/plugin/indentLine.vim" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/indentLine"
   },
   nerdtree = {
     commands = { "NERDTreeToggle" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/nerdtree"
+  },
+  ["packer.nvim"] = {
+    loaded = true,
+    path = "/home/ffong/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["popup-menu.nvim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/popup-menu.nvim"
   },
   ["popup.nvim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/popup.nvim"
   },
   ["spelunker.vim"] = {
     after_files = { "/home/ffong/.local/share/nvim/site/pack/packer/opt/spelunker.vim/after/plugin/ctrlp/spelunker.vim" },
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/spelunker.vim"
   },
   tagbar = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/tagbar"
   },
   undotree = {
@@ -164,26 +178,31 @@ _G.packer_plugins = {
   ["vim-airline"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-airline"
   },
   ["vim-airline-themes"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-airline-themes"
   },
   ["vim-autoformat"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-autoformat"
   },
   ["vim-commentary"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-commentary"
   },
   ["vim-css3-syntax"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-css3-syntax"
   },
   ["vim-devicons"] = {
@@ -193,37 +212,32 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-fugitive"
   },
   ["vim-gitgutter"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-gitgutter"
   },
   ["vim-go"] = {
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-go"
   },
   ["vim-haml"] = {
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-haml"
   },
   ["vim-javascript-syntax"] = {
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-javascript-syntax"
-  },
-  ["vim-lua-ftplugin"] = {
-    loaded = false,
-    needs_bufread = true,
-    path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-lua-ftplugin"
-  },
-  ["vim-lua-inspect"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-lua-inspect"
   },
   ["vim-misc"] = {
     loaded = true,
@@ -232,16 +246,19 @@ _G.packer_plugins = {
   ["vim-rhubarb"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-rhubarb"
   },
   ["vim-rooter"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-rooter"
   },
   ["vim-svelte-plugin"] = {
     loaded = false,
     needs_bufread = true,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vim-svelte-plugin"
   },
   ["vim-test"] = {
@@ -255,6 +272,7 @@ _G.packer_plugins = {
   ["vimproc.vim"] = {
     loaded = false,
     needs_bufread = false,
+    only_cond = false,
     path = "/home/ffong/.local/share/nvim/site/pack/packer/opt/vimproc.vim"
   }
 }
@@ -263,23 +281,22 @@ time([[Defining packer_plugins]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
-pcall(vim.cmd, [[command! -nargs=* -range -bang -complete=file NERDTreeToggle lua require("packer.load")({'nerdtree'}, { cmd = "NERDTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args> }, _G.packer_plugins)]])
+pcall(vim.cmd, [[command -nargs=* -range -bang -complete=file NERDTreeToggle lua require("packer.load")({'nerdtree'}, { cmd = "NERDTreeToggle", l1 = <line1>, l2 = <line2>, bang = <q-bang>, args = <q-args>, mods = "<mods>" }, _G.packer_plugins)]])
 time([[Defining lazy-load commands]], false)
 
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType lua ++once lua require("packer.load")({'vim-lua-ftplugin', 'vim-lua-inspect'}, { ft = "lua" }, _G.packer_plugins)]]
-vim.cmd [[au FileType html ++once lua require("packer.load")({'emmet-vim', 'vim-haml', 'vim-css3-syntax'}, { ft = "html" }, _G.packer_plugins)]]
-vim.cmd [[au FileType svelte ++once lua require("packer.load")({'vim-svelte-plugin'}, { ft = "svelte" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-javascript-syntax'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType html ++once lua require("packer.load")({'emmet-vim', 'vim-css3-syntax', 'vim-haml'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType svelte ++once lua require("packer.load")({'vim-svelte-plugin'}, { ft = "svelte" }, _G.packer_plugins)]]
 vim.cmd [[au FileType go ++once lua require("packer.load")({'vim-go'}, { ft = "go" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)
-vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'CSApprox', 'vim-rooter', 'tagbar', 'async.vim', 'asyncomplete.vim', 'vim-go', 'popup.nvim', 'vim-autoformat', 'auto-pairs', 'editorconfig-vim', 'grep.vim', 'indentLine', 'fzf.vim', 'coc.nvim', 'spelunker.vim', 'vim-rhubarb', 'vim-fugitive', 'popup-menu.nvim', 'vimproc.vim', 'vim-gitgutter', 'vim-airline', 'vim-airline-themes', 'fzf'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
-vim.cmd [[au BufEnter * ++once lua require("packer.load")({'emmet-vim', 'vim-lua-ftplugin', 'vim-svelte-plugin', 'vim-haml', 'vim-css3-syntax', 'vim-javascript-syntax', 'vim-lua-inspect', 'vim-commentary'}, { event = "BufEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufWinEnter * ++once lua require("packer.load")({'CSApprox', 'vim-rooter', 'tagbar', 'async.vim', 'vim-go', 'popup.nvim', 'vim-autoformat', 'auto-pairs', 'editorconfig-vim', 'vim-gitgutter', 'indentLine', 'fzf.vim', 'coc.nvim', 'spelunker.vim', 'fzf', 'vim-airline-themes', 'vimproc.vim', 'vim-fugitive', 'vim-rhubarb', 'vim-airline', 'popup-menu.nvim', 'grep.vim'}, { event = "BufWinEnter *" }, _G.packer_plugins)]]
+vim.cmd [[au BufEnter * ++once lua require("packer.load")({'emmet-vim', 'vim-svelte-plugin', 'vim-css3-syntax', 'vim-haml', 'vim-javascript-syntax', 'vim-commentary'}, { event = "BufEnter *" }, _G.packer_plugins)]]
 time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

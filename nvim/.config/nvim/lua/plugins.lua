@@ -2,6 +2,8 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
 
+    use 'wbthomason/packer.nvim'
+
     use {
         'xolox/vim-misc'
     }
@@ -73,10 +75,6 @@ return require('packer').startup(function()
 
     use {
         'prabirshrestha/async.vim',
-        event = 'BufWinEnter'
-    }
-    use {
-        'prabirshrestha/asyncomplete.vim',
         event = 'BufWinEnter'
     }
     use {
