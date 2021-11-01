@@ -95,3 +95,5 @@ let g:vim_svelte_plugin_use_sass = 1
 
 let g:enable_spelunker_vim = 1
 let g:enable_spelunker_vim_on_readonly = 1
+
+let gcoc_global_extensions = ['coc-eslint', 'coc-tsserver', 'coc-go', 'coc-css']
