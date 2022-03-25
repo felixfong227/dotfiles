@@ -327,13 +327,13 @@ else
     noremap YY "+y<CR>
     noremap <leader>p "+gP<CR>
     noremap XX "+x<CR>
-    
+
     if has('macunix')
-    " pbcopy for OSX copy/paste
-    vmap <C-x> :!pbcopy<CR>
-    vmap <C-c> :w !pbcopy<CR><CR>
-endif
-    
+        " pbcopy for OSX copy/paste
+        vmap <C-x> :!pbcopy<CR>
+        vmap <C-c> :w !pbcopy<CR><CR>
+    endif
+
     "
     "" Buffer nav
     noremap <leader>z :bp<CR>
@@ -519,8 +519,9 @@ endif
     " nnoremap <c-p> <cmd>lua require('telescope.builtin').find_files()<cr>
     " nnoremap <leader>ps <cmd>lua require('telescope.builtin').live_grep()<cr>
 
-    nnoremap <c-p> <cmd>:Files<cr>
-    nnoremap <leader>ps <cmd>:Rg<cr>
+    " Control P
+    nnoremap <c-p> <cmd>Telescope find_files<cr>
+    nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 
     nnoremap <leader>f :diffget //2<CR>
     nnoremap <leader>j :diffget //3<CR>
