@@ -103,14 +103,14 @@ return require('packer').startup(function()
         event = 'BufWinEnter'
     }
 
-    use {
-        'junegunn/fzf',
-        event = 'BufWinEnter'
-    }
-    use {
-        'junegunn/fzf.vim',
-        event = 'BufWinEnter'
-    }
+    -- use {
+    --     'junegunn/fzf',
+    --     event = 'BufWinEnter'
+    -- }
+    -- use {
+    --     'junegunn/fzf.vim',
+    --     event = 'BufWinEnter'
+    -- }
 
     -- For Go
     use {
@@ -166,6 +166,12 @@ return require('packer').startup(function()
     use {
         'preservim/nerdtree',
         cmd = {'NERDTreeToggle'}
+    }
+
+    use {
+      'nvim-telescope/telescope.nvim',
+      event = 'BufWinEnter',
+      requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- Themes
