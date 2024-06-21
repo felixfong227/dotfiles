@@ -12,12 +12,27 @@ return require('packer').startup(function()
         'tpope/vim-commentary',
         event = 'BufEnter'
     }
-
+    
     use {
-        'neoclide/coc.nvim',
-        branch = 'release',
-        event = 'BufWinEnter'
+        'nvim-treesitter/nvim-treesitter',
+        event = 'BufWinEnter',
+        run = ':TSUpdate',
+        config = function ()
+            require'nvim-treesitter.configs'.setup {
+                    ensure_installed = {"jsonc"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+                    highlight = {
+                        enable = true,              -- false will disable the whole extension
+                    }
+             }
+
+        end
     }
+
+    -- use {
+    --     'neoclide/coc.nvim',
+    --     branch = 'release',
+    --     event = 'BufWinEnter'
+    -- }
 
     -- use {
     --     'mhinz/vim-signify',
@@ -48,10 +63,10 @@ return require('packer').startup(function()
         'vim-scripts/grep.vim',
         event = 'BufWinEnter'
     }
-    use {
-        'vim-scripts/CSApprox',
-        event = 'BufWinEnter'
-    }
+    -- use {
+    --     'vim-scripts/CSApprox',
+    --     event = 'BufWinEnter'
+    -- }
     use {
         'jiangmiao/auto-pairs',
         event = 'BufWinEnter'
@@ -60,14 +75,14 @@ return require('packer').startup(function()
         'majutsushi/tagbar',
         event = 'BufWinEnter'
     }
-    use {
-        'Yggdroot/indentLine',
-        event = 'BufWinEnter'
-    }
-    use {
-        'tpope/vim-rhubarb',
-        event = 'BufWinEnter'
-    }
+    -- use {
+    --     'Yggdroot/indentLine',
+    --     event = 'BufWinEnter'
+    -- }
+    -- use {
+    --     'tpope/vim-rhubarb',
+    --     event = 'BufWinEnter'
+    -- }
     use {
         'Shougo/vimproc.vim',
         event = 'BufWinEnter'
@@ -81,10 +96,10 @@ return require('packer').startup(function()
         'Chiel92/vim-autoformat',
         event = 'BufWinEnter'
     }
-    use {
-        'editorconfig/editorconfig-vim',
-        event = 'BufWinEnter'
-    }
+    -- use {
+    --     'editorconfig/editorconfig-vim',
+    --     event = 'BufWinEnter'
+    -- }
 
     use {
         'nvim-lua/popup.nvim',
@@ -113,36 +128,36 @@ return require('packer').startup(function()
     -- }
 
     -- For Go
-    use {
-        'fatih/vim-go',
-        ft = {'go'},
-        event = 'BufWinEnter'
-    }
+    -- use {
+    --     'fatih/vim-go',
+    --     ft = {'go'},
+    --     event = 'BufWinEnter'
+    -- }
 
     -- For HTML
-    use {
-        'hail2u/vim-css3-syntax',
-        ft = {'html'},
-        event = 'BufEnter'
-    }
+    -- use {
+    --     'hail2u/vim-css3-syntax',
+    --     ft = {'html'},
+    --     event = 'BufEnter'
+    -- }
 
-    use {
-        'tpope/vim-haml',
-        ft = {'html'},
-        event = 'BufEnter'
-    }
-    use {
-        'mattn/emmet-vim',
-        ft = {'html'},
-        event = 'BufEnter'
-    }
+    -- use {
+    --     'tpope/vim-haml',
+    --     ft = {'html'},
+    --     event = 'BufEnter'
+    -- }
+    -- use {
+    --     'mattn/emmet-vim',
+    --     ft = {'html'},
+    --     event = 'BufEnter'
+    -- }
 
     -- For JavaScript
-    use {
-        'jelera/vim-javascript-syntax',
-        ft = {'javascript'},
-        event = 'BufEnter'
-    }
+    -- use {
+    --     'jelera/vim-javascript-syntax',
+    --     ft = {'javascript'},
+    --     event = 'BufEnter'
+    -- }
 
     -- For TypeScript
     -- use {
@@ -157,11 +172,11 @@ return require('packer').startup(function()
     -- }
 
     -- For Svelte
-    use {
-        'leafOfTree/vim-svelte-plugin',
-        ft = {'svelte'},
-        event = 'BufEnter'
-    }
+    -- use {
+    --     'leafOfTree/vim-svelte-plugin',
+    --     ft = {'svelte'},
+    --     event = 'BufEnter'
+    -- }
 
     use {
         'preservim/nerdtree',
@@ -170,21 +185,70 @@ return require('packer').startup(function()
 
     use {
       'nvim-telescope/telescope.nvim',
-      event = 'BufWinEnter',
+      -- event = 'BufWinEnter',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- Themes
-    -- use 'morhetz/gruvbox'
+    use 'morhetz/gruvbox'
     -- use 'wadackel/vim-dogrun'
     -- use 'sainnhe/edge'
     -- use 'gruvbox-community/gruvbox'
-    use 'ayu-theme/ayu-vim'
+    -- use 'ayu-theme/ayu-vim'
 
-    use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use {
+        'folke/tokyonight.nvim'
+    }
+
+    -- use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
 
     use 'mbbill/undotree'
 
     use 'ryanoasis/vim-devicons'
+
+    use { 
+        'esensar/nvim-dev-container',
+        event = 'BufWinEnter',
+        config = function() 
+            require("devcontainer").setup{
+              attach_mounts = {
+                    neovim_config = {
+                      enabled = true,
+                    },
+                    neovim_data = {
+                      enabled = true,
+                    },
+                    neovim_state = {
+                      enabled = true,
+                    },
+              },
+            }
+        end,
+     }
+
+     use {
+         "williamboman/mason.nvim",
+         config = function()
+             require("mason").setup{}
+         end,
+         requires = {
+             {
+                 'williamboman/mason-lspconfig.nvim',
+                 config = function()
+                     require("mason-lspconfig").setup{}
+                     require("lspconfig").ruff_lsp.setup{}
+                 end,
+                 requires = {
+                     {
+                         'neovim/nvim-lspconfig',
+                         config = function()
+                             require('neovim/nvim-lspconfig').setup{}
+                         end,
+                     }
+                 }
+             },
+         }
+     }
+    
 
 end)

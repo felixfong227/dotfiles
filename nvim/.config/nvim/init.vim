@@ -113,11 +113,12 @@ else
     let ayucolor="mirage"
 
     " colorscheme molokai
-    " colorscheme gruvbox
+    colorscheme gruvbox
     " colorscheme dogrun
     " colorscheme edge
-    colorscheme ayu
+    " colorscheme ayu
 
+    " colorscheme tokyonight-storm
 
     " Transparents background
     " hi Normal guibg=NONE ctermbg=NONE
@@ -263,7 +264,7 @@ else
     noremap <Leader>gb :Git blame<CR>
     noremap <Leader>gd :Gdiffsplit<CR>
     noremap <Leader>gr :Git move<CR>
-    noremap <Leader>gl :Glog<CR>
+    noremap <Leader>gl :Git log<CR>
 
     " session management
     " nnoremap <leader>so :OpenSession<Space>
@@ -521,6 +522,7 @@ else
 
     " Control P
     nnoremap <c-p> <cmd>Telescope find_files<cr>
+    " Global search
     nnoremap <leader>ps <cmd>Telescope live_grep<cr>
 
     nnoremap <leader>f :diffget //2<CR>
@@ -548,3 +550,5 @@ else
     let g:AutoPairsFlyMode = 0
     let g:AutoPairsMultilineClose = 0
 endif
+
+inoremap <C-c> <Esc>`^
