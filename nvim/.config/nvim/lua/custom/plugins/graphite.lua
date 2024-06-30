@@ -1,0 +1,3 @@
+return {
+  'kroucher/graphite.nvim',
+}
